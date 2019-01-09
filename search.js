@@ -210,7 +210,7 @@ var dictionary = [
 ];
 
 var itnum;
-var elems = document.querySelectorAll('p,li,h1,h2,h3,h4,tr,a'), i = 0;
+var elems = document.querySelectorAll('p,li,h1,h2,h3,h4,tr,a,strong'), i = 0;
 
 /*Itterates through terms selecting terms and definitions*/
 for(var i = 0; i < dictionary.length; i++){
@@ -231,17 +231,24 @@ function replaceText(text, myTerm, flags) {
   }
 }
 
-/*this function injects the abbr element into a window*/
+/*this function injects the abbr element into a new window*/
 
+/*
 var myselect = document.querySelectorAll("[id*='popdef']"), i = 0;
 for (; i < myselect.length; i++) {
-  myselect[i].onmouseenter = function() {mouseEnter()};
-
-
+  myselect[i].onmouseenter = function() {mouseEnter(this)};
+  myselect[i].onmouseout = function() {mouseExit(this)};
 }
 
-function mouseEnter() {
-  //having trouble with the selector
-  myselect[i].style.color = "red";
-  console.log("hello?"+i);
+
+
+function mouseEnter(obj) {
+  obj.
 }
+
+
+
+function mouseExit(obj) {
+  obj.style.color = "black";
+}
+*/
